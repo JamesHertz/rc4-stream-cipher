@@ -13,4 +13,4 @@ and to decrypt:
 
 
 # TODOs:
-- [ ] Validate that the key size is in the range [0, 255]
+- [ ] Validate that the key size is in the range [1, 256]
