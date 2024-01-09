@@ -2,13 +2,13 @@
 
 Simple RC4 implementation on c. 
 
-# Building Instruction
+# Build Instruction
 To build the project just run the following:
 ```sh
 $ make
 ```
 
-# Run the program
+# How to Run the program
 
 The program receives 3 arguments: `<secret-key-hex>` which is the rc4 variable size secret key in hexadecimal (may or may not start with 0x), it also receives `<src-filename>` and `<dst-filename>` which are respectively the name of the file with the contents to be encrypted/decrypted and the file that will contain the encrypted/decrypted data.
 
