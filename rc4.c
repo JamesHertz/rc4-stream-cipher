@@ -29,11 +29,16 @@ void rc4_init(rc4_ctx_t * ctx, secret_key_t key){
 
 uint8_t rc4_encrypt(rc4_ctx_t * ctx, uint8_t byte){
     uint8_t * state = ctx->state;
-    size_t i = ctx->i + 1;
+    size_t i = (ctx->i + 1) % STATE_SIZE;
     size_t j = (ctx->state[i] + ctx->j) % STATE_SIZE;
 
     swap(&state[i], &state[j]);
 
+    // update i and j c:
+    ctx->i = i;
+    ctx->j = j;
+
+    // generate sub key and encrypt byte
     size_t t = (state[i] + state[j]) % STATE_SIZE;
     uint8_t sub_key = state[t];
     return byte ^ sub_key;
