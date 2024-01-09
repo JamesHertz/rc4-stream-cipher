@@ -4,11 +4,17 @@ Simple RC4 implementation on c. The program receives 3 arguments: `<secret-key-h
 
 For example to encrypt this README with the secret key `0xabcd` we would run:
 ```sh
-./main  0xabcd README.md README-CIPHER-TXT.md
+$ ./main  0xabcd README.md README-CIPHER-TXT.md
 ```
 and to decrypt:
 ```sh
-./main 0xabcd README-CIPHER-TXT.md README-PLAIN-TXT.md
+$ ./main 0xabcd README-CIPHER-TXT.md README-PLAIN-TXT.md
+```
+
+# Building Instruction
+To build the project just run the following:
+```sh
+$ make
 ```
 
 
