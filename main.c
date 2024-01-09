@@ -6,12 +6,6 @@
 
 #include "rc4.h"
 
-#define swap(fst, snd) do {  \
-        *fst = *snd ^ *fst;  \
-        *snd = *fst ^ *snd;  \
-        *fst = *snd ^ *fst;  \
-    }while(0)
-
 secret_key_t parse_key(const char * key_hex) {
 
     if( strncmp("0x", key_hex, 2) == 0 ) {
